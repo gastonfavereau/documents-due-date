@@ -1,4 +1,4 @@
-# system-due-date
+# documents-due-date
 
 Es un sistema para el control de vencimiento de documentos
 - Permite que una misma compañia tenga varios usuarios para que gestionen transacciones con varios documentos.

@@ -1,3 +1,3 @@
 class Client < ApplicationRecord
-    belong_to :company
+    belongs_to :company
 end

@@ -1,3 +1,3 @@
 class FinancialInstitution < ApplicationRecord
-    belong_to :company
+    belongs_to :company
 end

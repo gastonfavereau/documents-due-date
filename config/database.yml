@@ -8,10 +8,10 @@ default: &default
 
 development:
   <<: *default
-  database: system-due-date_development
+  database: documents-due-date_development
 test:
   <<: *default
-  database: system-due-date_test
+  database: documents-due-date_test
 production:
   <<: *default
-  database: system-due-date_production
+  database: documents-due-date_production
