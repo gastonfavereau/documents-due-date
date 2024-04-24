@@ -5,7 +5,7 @@ class CreateTransactions < ActiveRecord::Migration[7.0]
       t.text :description
       t.uuid :company_id
       t.uuid :document_id
-      t.uuid :cliente_id
+      t.uuid :client_id
 
       t.timestamps
     end

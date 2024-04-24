@@ -32,14 +32,14 @@ Currency.create([
                 ])
 
 Transaction.create(date: Date.today, description: 'Una larga descripción', company_id: Company.first.id,
-                   cliente_id: Client.first.id)
+                   client_id: Client.first.id)
 
 Document.create([
                   { issue_date: Date.today, due_date: Date.today + 15, amount: Random.random_number * 1_000_000, status: 'Pendiente',
                     currency_id: Currency.find_by(symbol: 'USD').id, company_id: Company.first.id, document_type_id: DocumentType.find_by(name: 'Cheque').id,
-                    transactions_id: Transaction.first.id, financial_institutions_id: FinancialInstitution.first.id },
+                    transaction_id: Transaction.first.id, financial_institution_id: FinancialInstitution.first.id },
 
                   { issue_date: Date.today, due_date: Date.today + 30, amount: Random.random_number * 1_000_000, status: 'Pendiente',
-                    currency_id: Currency.find_by(symbol: 'EUR').id, company_id: Company.first.id, document_type_id: Document.find_by(name: 'Pagare').id,
-                    transactions_id: Transaction.first.id }
+                    currency_id: Currency.find_by(symbol: 'EUR').id, company_id: Company.first.id, document_type_id: DocumentType.find_by(name: 'Pagare').id,
+                    transaction_id: Transaction.first.id }
                 ])

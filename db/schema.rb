@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_14_132808) do
+ActiveRecord::Schema[7.0].define(version: 2024_04_19_164041) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -58,8 +58,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_14_132808) do
     t.uuid "currency_id"
     t.uuid "company_id"
     t.uuid "document_type_id"
-    t.uuid "transactions_id"
-    t.uuid "financial_institutions_id"
+    t.uuid "transaction_id"
+    t.uuid "financial_institution_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -86,7 +86,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_14_132808) do
     t.date "date"
     t.text "description"
     t.uuid "company_id"
-    t.uuid "cliente_id"
+    t.uuid "client_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -102,4 +102,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_14_132808) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "clients", "companies"
+  add_foreign_key "currencies", "companies"
+  add_foreign_key "document_types", "companies"
+  add_foreign_key "documents", "companies"
+  add_foreign_key "documents", "currencies"
+  add_foreign_key "documents", "document_types"
+  add_foreign_key "documents", "financial_institutions"
+  add_foreign_key "financial_institutions", "companies"
+  add_foreign_key "transactions", "clients"
+  add_foreign_key "transactions", "companies"
+  add_foreign_key "users", "companies"
 end

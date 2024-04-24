@@ -8,8 +8,8 @@ class CreateDocuments < ActiveRecord::Migration[7.0]
       t.uuid :currency_id
       t.uuid :company_id
       t.uuid :document_type_id
-      t.uuid :transactions_id
-      t.uuid :financial_institutions_id
+      t.uuid :transaction_id
+      t.uuid :financial_institution_id
 
       t.timestamps
     end
