@@ -1,0 +1,6 @@
+{
+    "solargraph.autoformat": true,
+    "solargraph.diagnostics": true,
+    "solargraph.formatting": true,
+    "editor.tabSize": 2
+}
